@@ -1,0 +1,17 @@
+{% extendss "base.html" %}
+{% Block Content %}
+
+
+        <form method='post'>
+            <label>
+                New Task:
+                <input type="text" name='task' />
+            </label>
+            <input type="submit" value='Add Task' />
+        </form>
+
+        {% for post in posts %}
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.body }}</p>
+        {% endfor %}
+{% End Block Content %}
